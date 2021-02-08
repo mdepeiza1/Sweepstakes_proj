@@ -32,5 +32,13 @@ namespace Sweepstakes
             string input = Console.ReadLine();
             return input;
         }
+        public static void Notify(Contestant winner)
+        {
+            Console.WriteLine("{0} {1} won the sweepstakes!", winner.FirstName, winner.LastName);
+        }
+        public static void NotifyWinner(Contestant winner)
+        {
+            Console.WriteLine("Congratulations, {0} {1}, you won the sweepstakes!", winner.FirstName, winner.LastName);
+        }
     }
 }

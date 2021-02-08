@@ -36,5 +36,15 @@ namespace Sweepstakes
         {
             UserInterface.AssignContestantInfo(this);
         }
+
+        public void Notify(Contestant winner)
+        {
+            UserInterface.Notify(winner);
+        }
+
+        public void NotifyWinner(Contestant winner)
+        {
+            UserInterface.NotifyWinner(winner);
+        }
     }
 }
