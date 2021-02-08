@@ -10,7 +10,7 @@ namespace Sweepstakes
     {
         private ISweepstakesManager _manager;
 
-        public MarketingFirm(ISweepstakesManager manager)
+        public MarketingFirm(ISweepstakesManager manager) //Dependency injection is occurring here. The benefit is the type of Manager (stack or queue) does not need to be defined in the initial instantiation.
         {
             _manager = manager;
         }
