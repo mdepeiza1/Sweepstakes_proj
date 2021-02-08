@@ -15,11 +15,14 @@ namespace Sweepstakes
                 SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
                 MarketingFirm marketingFirm = new MarketingFirm(sweepstakesQueueManager);
             }
-
-            if(type == "stack" || type == "Stack")
+            else if(type == "stack" || type == "Stack")
             {
                 SweepstakesStackManager sweepstakesStackManager = new SweepstakesStackManager();
                 MarketingFirm marketingFirm = new MarketingFirm(sweepstakesStackManager);
+            }
+            else
+            {
+                throw new ArgumentException("Invalid type");
             }
         }
     }
