@@ -31,5 +31,10 @@ namespace Sweepstakes
             get;
             set;
         }
+
+        public Contestant() //may not be correct implementation
+        {
+            UserInterface.AssignContestantInfo(this);
+        }
     }
 }
