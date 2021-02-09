@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MailKit.Net.Smtp;
+using MailKit;
+using MimeKit;
+
 namespace Sweepstakes
 {
     class Contestant
@@ -42,9 +46,31 @@ namespace Sweepstakes
             UserInterface.Notify(winner);
         }
 
-        public void NotifyWinner(Contestant winner)
+        public void NotifyWinner(Contestant winner) //Test this! Especially the email portion
         {
             UserInterface.NotifyWinner(winner);
+
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Joey Tribbiani", "noreply@gmail.com"));
+            message.To.Add(new MailboxAddress("Mike", "depmike63@gmail.com"));
+            message.Subject = "You Won!";
+
+            message.Body = new TextPart("plain")
+            {
+                Text = @"Hey, you won the sweepstakes!"
+            };
+
+            using (var client = new SmtpClient())
+            {
+                client.Connect("smtp.gmail.com", 587);
+
+                client.AuthenticationMechanisms.Remove("XOAUTH2");
+
+                //client.Authenticate("YOUR_GMAIL_NAME", "YOUR_PASSWORD");
+
+                client.Send(message);
+                client.Disconnect(true);
+            }
         }
     }
 }
