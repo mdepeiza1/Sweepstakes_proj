@@ -12,7 +12,7 @@ namespace Sweepstakes
 
         public MarketingFirm(ISweepstakesManager manager) //Dependency injection is occurring here. The benefit is the type of Manager (stack or queue) does not need to be defined in the initial instantiation.
         {
-            _manager = manager;
+            _manager = manager; // look here for where to implement your factory method ISweeepStakesManager
         }
 
         public void CreateSweepstake()
