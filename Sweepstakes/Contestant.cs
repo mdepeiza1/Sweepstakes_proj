@@ -51,7 +51,7 @@ namespace Sweepstakes
             UserInterface.NotifyWinner(winner);
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Joey Tribbiani", "noreply@gmail.com"));
+            message.From.Add(new MailboxAddress("Sweepstakes Office", "noreply@gmail.com"));
             message.To.Add(new MailboxAddress("Mike", "depmike63@gmail.com"));
             message.Subject = "You Won!";
 
