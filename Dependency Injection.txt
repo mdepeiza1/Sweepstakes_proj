@@ -1,0 +1,6 @@
+Dependency Injection:
+
+Dependency injection is occurring in the constructor public MarketingFirm(ISweepstakesManager manager) in the MarketingFirm class. 
+The benefit is the type of Manager (stack or queue) does not need to be defined in the initial instantiation.
+This allows the instantiation to be flexible.
+The Marketing Firm can choose at instantiation whether the manager will be queue-based or stack-based.
