@@ -66,7 +66,7 @@ namespace Sweepstakes
 
                 client.AuthenticationMechanisms.Remove("XOAUTH2");
 
-                //client.Authenticate("YOUR_GMAIL_NAME", "YOUR_PASSWORD");
+                client.Authenticate("depmike63@gmail.com", ""); //should be changed to sending 
 
                 client.Send(message);
                 client.Disconnect(true);
