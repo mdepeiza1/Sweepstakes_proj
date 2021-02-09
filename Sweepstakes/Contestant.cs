@@ -52,7 +52,7 @@ namespace Sweepstakes
 
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("Sweepstakes Office", "noreply@gmail.com"));
-            message.To.Add(new MailboxAddress("Mike", "depmike63@gmail.com"));
+            message.To.Add(new MailboxAddress(winner.FirstName + " " + winner.LastName, winner.EmailAddress));
             message.Subject = "You Won!";
 
             message.Body = new TextPart("plain")
