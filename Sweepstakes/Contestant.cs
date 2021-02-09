@@ -36,7 +36,7 @@ namespace Sweepstakes
             set;
         }
 
-        public Contestant() //may not be correct implementation
+        public Contestant()
         {
             UserInterface.AssignContestantInfo(this);
         }
@@ -46,7 +46,7 @@ namespace Sweepstakes
             UserInterface.Notify(winner);
         }
 
-        public void NotifyWinner(Contestant winner) //Test this! Especially the email portion
+        public void NotifyWinner(Contestant winner)
         {
             UserInterface.NotifyWinner(winner);
 

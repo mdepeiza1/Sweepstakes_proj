@@ -12,7 +12,7 @@ namespace Sweepstakes
 
         public MarketingFirm(ISweepstakesManager manager)
         {
-            _manager = manager; // look here for where to implement your factory method ISweeepStakesManager
+            _manager = manager; 
         }
 
         public void CreateSweepstake()

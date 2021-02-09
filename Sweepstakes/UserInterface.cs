@@ -15,7 +15,7 @@ namespace Sweepstakes
             contestant.FirstName = GetUserInputFor("What is your first name?");
             contestant.LastName = GetUserInputFor("What is your last name?");
             contestant.EmailAddress = GetUserInputFor("What is your email address?");
-            contestant.RegistrationNumber = Int32.Parse(GetUserInputFor("What is your registration number?")); //does this need to be unique
+            contestant.RegistrationNumber = Int32.Parse(GetUserInputFor("What is your registration number?"));
             return contestant;
         }
 
